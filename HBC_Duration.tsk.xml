@@ -7,7 +7,49 @@
 		<pri>100</pri>
 		<rty>1</rty>
 		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_task_name</Str>
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity_map</Str>
+			<Str sr="arg1" ve="3">c,c,c,c,c,c,s,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,s,c,s</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>590</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity_map</Str>
+			<Str sr="arg1" ve="3">,</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act5" ve="7">
 			<code>351</code>
+			<se>false</se>
 			<Bundle sr="arg0">
 				<Vals sr="val">
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_auth_headers
@@ -16,68 +58,1045 @@ Verwenden Sie dies in der Aktion HTTP-Anfrage im Feld 'Header', um die Anfrage z
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
 				</Vals>
 			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Str sr="arg10" ve="3"/>
+			<Int sr="arg1" val="0" />
+			<Str sr="arg10" ve="3" />
 			<Str sr="arg2" ve="3">%hbc_client_id</Str>
 			<Str sr="arg3" ve="3">%hbc_client_secret</Str>
 			<Str sr="arg4" ve="3">https://api.extrahelden.de/authorize</Str>
 			<Str sr="arg5" ve="3">https://api.extrahelden.de/token</Str>
 			<Str sr="arg6" ve="3">client</Str>
-			<Int sr="arg7" val="0"/>
-			<Int sr="arg8" val="30"/>
-			<Str sr="arg9" ve="3"/>
+			<Int sr="arg7" val="0" />
+			<Int sr="arg8" val="30" />
+			<Str sr="arg9" ve="3" />
 		</Action>
-		<Action sr="act1" ve="7">
+		<Action sr="act6" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act7" ve="7">
 			<code>547</code>
-			<Str sr="arg0" ve="3">%hbc_auth_header</Str>
-			<Str sr="arg1" ve="3">%http_auth_headers</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">HTTP Auth</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">1</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map1</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
 		</Action>
 		<Action sr="act10" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%HBC_CurrPlayingSongMaxDurationMS</Str>
-			<Str sr="arg1" ve="3">%http_data.duration_ms</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act11" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%HBC_CurrPlayingSongName</Str>
-			<Str sr="arg1" ve="3">%http_data.item.name</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
 		</Action>
 		<Action sr="act12" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%HBC_PlayerCurrSongPng</Str>
-			<Str sr="arg1" ve="3">%http_data.item.album.images.url</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
 		</Action>
 		<Action sr="act13" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%HBC_SongDurationProgressMS</Str>
-			<Str sr="arg1" ve="3">%http_data.progress_ms</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
 		</Action>
 		<Action sr="act14" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act22" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act23" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act24" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act25" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act26" ve="7">
+			<code>547</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%hbc_auth_header</Str>
+			<Str sr="arg1" ve="3">%http_auth_headers</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act27" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act28" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Variable Set</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act29" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">2</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act30" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map2</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act31" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act32" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act33" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act34" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act35" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act36" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act37" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act38" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act39" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act40" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act41" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act42" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act43" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act44" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act45" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act46" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act47" ve="7">
+			<code>547</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%HBC_CurrPlayingSongMaxDurationMS</Str>
+			<Str sr="arg1" ve="3">%http_data.duration_ms</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act48" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act49" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Variable Set</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act50" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">3</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act51" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map3</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act52" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act53" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act54" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act55" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act56" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act57" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act58" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act59" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act60" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act61" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act62" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act63" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act64" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act65" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act66" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act67" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act68" ve="7">
+			<code>547</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%HBC_CurrPlayingSongName</Str>
+			<Str sr="arg1" ve="3">%http_data.item.name</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act69" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act70" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Variable Set</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act71" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">4</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act72" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map4</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act73" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act74" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act75" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act76" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act77" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act78" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act79" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act80" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act81" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act82" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act83" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act84" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act85" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act86" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act87" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act88" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act89" ve="7">
+			<code>547</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%HBC_PlayerCurrSongPng</Str>
+			<Str sr="arg1" ve="3">%http_data.item.album.images.url</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act90" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act91" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Variable Set</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act92" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">5</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act93" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map5</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act94" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act95" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act96" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act97" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act98" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act99" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act100" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act101" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act102" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act103" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act104" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act105" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act106" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act107" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act108" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act109" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act110" ve="7">
+			<code>547</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%HBC_SongDurationProgressMS</Str>
+			<Str sr="arg1" ve="3">%http_data.progress_ms</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act111" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act112" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Variable Set</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act113" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">6</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act114" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map6</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act115" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act116" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act117" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act118" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act119" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act120" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act121" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act122" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act123" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act124" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act125" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act126" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act127" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act128" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act129" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act130" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act131" ve="7">
 			<code>339</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -96,55 +1115,706 @@ Enthält immer den vollständigen Pfad der Datei, auch wenn Sie ein Verzeichnis 
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
 				</Vals>
 			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg10" val="0" />
+			<Int sr="arg11" val="0" />
+			<Int sr="arg12" val="1" />
 			<Str sr="arg2" ve="3">%HBC_PlayerCurrSongPng</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Str sr="arg5" ve="3" />
+			<Str sr="arg6" ve="3" />
 			<Str sr="arg7" ve="3">Tasker/HBC/img/img.png</Str>
-			<Int sr="arg8" val="30"/>
-			<Int sr="arg9" val="0"/>
+			<Int sr="arg8" val="30" />
+			<Int sr="arg9" val="0" />
 		</Action>
-		<Action sr="act15" ve="7">
+		<Action sr="act132" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act133" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">HTTP Request</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act134" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">7</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act135" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map7</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act136" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act137" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act138" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act139" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act140" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act141" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act142" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act143" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act144" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act145" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act146" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act147" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act148" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act149" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act150" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act151" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act152" ve="7">
 			<code>66</code>
+			<se>false</se>
 			<Str sr="arg0" ve="3">HBC Startseite</Str>
 			<Str sr="arg1" ve="3">HBC Player Curr Song Png</Str>
 			<Img sr="arg2" ve="2">
 				<var>%HBC_PlayerCurrSongPngPath</var>
 			</Img>
 		</Action>
-		<Action sr="act16" ve="7">
+		<Action sr="act153" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act154" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Element Image</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act155" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">8</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act156" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map8</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act157" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act158" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act159" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act160" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act161" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act162" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act163" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act164" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act165" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act166" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act167" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act168" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act169" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act170" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act171" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act172" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act173" ve="7">
 			<code>51</code>
+			<se>false</se>
 			<Str sr="arg0" ve="3">HBC Startseite</Str>
 			<Str sr="arg1" ve="3">HBC Player Curr Song Name</Str>
-			<Int sr="arg2" val="0"/>
+			<Int sr="arg2" val="0" />
 			<Str sr="arg3" ve="3">%http_data.item.name</Str>
-			<Str sr="arg4" ve="3"/>
+			<Str sr="arg4" ve="3" />
 		</Action>
-		<Action sr="act17" ve="7">
+		<Action sr="act174" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act175" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Element Text</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act176" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">9</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act177" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map9</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act178" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act179" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act180" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act181" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act182" ve="7">
 			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act183" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act184" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act185" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act186" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act187" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act188" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act189" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act190" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act191" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act192" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act193" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act194" ve="7">
+			<code>130</code>
+			<se>false</se>
 			<Str sr="arg0" ve="3">HBC Get PlayPause</Str>
 			<Int sr="arg1">
 				<var>%priority</var>
 			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3" />
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
 		</Action>
-		<Action sr="act18" ve="7">
+		<Action sr="act195" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act196" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Perform Task</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act197" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">10</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act198" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map10</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act199" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act200" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act201" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act202" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act203" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act204" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act19" ve="7">
+		<Action sr="act205" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act206" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act207" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act208" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act209" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act210" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act211" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act212" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act213" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act214" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act215" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act216" ve="7">
 			<code>37</code>
 			<coll>true</coll>
 			<ConditionList sr="if">
@@ -155,7 +1825,7 @@ Enthält immer den vollständigen Pfad der Datei, auch wenn Sie ein Verzeichnis 
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act2" ve="7">
+		<Action sr="act217" ve="7">
 			<code>37</code>
 			<label>start</label>
 			<ConditionList sr="if">
@@ -166,39 +1836,366 @@ Enthält immer den vollständigen Pfad der Datei, auch wenn Sie ein Verzeichnis 
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act20" ve="7">
+		<Action sr="act218" ve="7">
 			<code>50</code>
+			<se>false</se>
 			<Str sr="arg0" ve="3">HBC Startseite</Str>
 			<Str sr="arg1" ve="3">SongDurationPrrogress</Str>
 			<Int sr="arg2">
 				<var>%progress</var>
 			</Int>
 		</Action>
-		<Action sr="act21" ve="7">
+		<Action sr="act219" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act220" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Element Value</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act221" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">14</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act222" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map14</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act223" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act224" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act225" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act226" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act227" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act228" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act229" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act230" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act231" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act232" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act233" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act234" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act235" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act236" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act237" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act238" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act239" ve="7">
 			<code>43</code>
 		</Action>
-		<Action sr="act22" ve="7">
+		<Action sr="act240" ve="7">
 			<code>50</code>
+			<se>false</se>
 			<Str sr="arg0" ve="3">HBC Startseite</Str>
 			<Str sr="arg1" ve="3">SongDurationPrrogress</Str>
 			<Int sr="arg2">
 				<var>%progress</var>
 			</Int>
 		</Action>
-		<Action sr="act23" ve="7">
+		<Action sr="act241" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act242" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Element Value</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act243" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">16</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act244" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map16</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act245" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act246" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act247" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act248" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act249" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act250" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act251" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act252" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act253" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act254" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act255" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act256" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act257" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act258" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act259" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act260" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act261" ve="7">
 			<code>135</code>
-			<Int sr="arg0" val="1"/>
-			<Int sr="arg1" val="3"/>
+			<Int sr="arg0" val="1" />
+			<Int sr="arg1" val="3" />
 			<Str sr="arg2" ve="3">start</Str>
 		</Action>
-		<Action sr="act24" ve="7">
+		<Action sr="act262" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act25" ve="7">
+		<Action sr="act263" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act3" ve="7">
+		<Action sr="act264" ve="7">
 			<code>339</code>
+			<se>false</se>
 			<Bundle sr="arg0">
 				<Vals sr="val">
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_response_code
@@ -217,21 +2214,184 @@ Daten, die der Server von der HTTP-Anfrage zurückgegeben hat.&lt;/_array_net.di
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
 				</Vals>
 			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg10" val="0" />
+			<Int sr="arg11" val="0" />
+			<Int sr="arg12" val="1" />
 			<Str sr="arg2" ve="3">https://api.extrahelden.de/player</Str>
 			<Str sr="arg3" ve="3">%hbc_auth_header</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="30"/>
-			<Int sr="arg9" val="0"/>
+			<Str sr="arg4" ve="3" />
+			<Str sr="arg5" ve="3" />
+			<Str sr="arg6" ve="3" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="30" />
+			<Int sr="arg9" val="0" />
 		</Action>
-		<Action sr="act4" ve="7">
+		<Action sr="act265" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act266" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">HTTP Request</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act267" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">20</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act268" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map20</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act269" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act270" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act271" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act272" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act273" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act274" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act275" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act276" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act277" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act278" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act279" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act280" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act281" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act282" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act283" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act284" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act285" ve="7">
 			<code>399</code>
+			<se>false</se>
 			<Bundle sr="arg0">
 				<Vals sr="val">
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%progress
@@ -245,22 +2405,347 @@ Ergebnis der Map-Operation
 			<Str sr="arg3" ve="3">%http_data.item.duration_ms</Str>
 			<Str sr="arg4" ve="3">0</Str>
 			<Str sr="arg5" ve="3">500000</Str>
-			<Int sr="arg6" val="0"/>
-			<Int sr="arg7" val="0"/>
-			<Int sr="arg8" val="3"/>
+			<Int sr="arg6" val="0" />
+			<Int sr="arg7" val="0" />
+			<Int sr="arg8" val="3" />
 			<Str sr="arg9" ve="3">%progress</Str>
 		</Action>
-		<Action sr="act5" ve="7">
+		<Action sr="act286" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act287" ve="7">
 			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Java Function</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act288" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">21</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act289" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map21</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act290" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act291" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act292" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act293" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act294" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act295" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act296" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act297" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act298" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act299" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act300" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act301" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act302" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act303" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act304" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act305" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act306" ve="7">
+			<code>547</code>
+			<se>false</se>
 			<Str sr="arg0" ve="3">%HBC_SongDurationProgressMS</Str>
 			<Str sr="arg1" ve="3">%progress</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
 		</Action>
-		<Action sr="act6" ve="7">
+		<Action sr="act307" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act308" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Variable Set</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act309" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">22</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act310" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map22</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act311" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act312" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act313" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act314" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act315" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act316" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act317" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act318" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act319" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act320" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act321" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act322" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act323" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act324" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act325" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act326" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act327" ve="7">
 			<code>37</code>
 			<coll>false</coll>
 			<ConditionList sr="if">
@@ -271,7 +2756,7 @@ Ergebnis der Map-Operation
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act7" ve="7">
+		<Action sr="act328" ve="7">
 			<code>351</code>
 			<label>repeat</label>
 			<se>false</se>
@@ -283,28 +2768,353 @@ Verwenden Sie dies in der Aktion HTTP-Anfrage im Feld 'Header', um die Anfrage z
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
 				</Vals>
 			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Str sr="arg10" ve="3"/>
+			<Int sr="arg1" val="0" />
+			<Str sr="arg10" ve="3" />
 			<Str sr="arg2" ve="3">%hbc_client_id</Str>
 			<Str sr="arg3" ve="3">%hbc_client_secret</Str>
 			<Str sr="arg4" ve="3">https://api.extrahelden.de/authorize</Str>
 			<Str sr="arg5" ve="3">https://api.extrahelden.de/token</Str>
 			<Str sr="arg6" ve="3">client</Str>
-			<Int sr="arg7" val="0"/>
-			<Int sr="arg8" val="30"/>
-			<Str sr="arg9" ve="3"/>
+			<Int sr="arg7" val="0" />
+			<Int sr="arg8" val="30" />
+			<Str sr="arg9" ve="3" />
 		</Action>
-		<Action sr="act8" ve="7">
+		<Action sr="act329" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act330" ve="7">
 			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">HTTP Auth</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act331" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">24</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act332" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map24</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act333" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act334" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act335" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act336" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act337" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act338" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act339" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act340" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act341" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act342" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act343" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act344" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act345" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act346" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act347" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act348" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act349" ve="7">
+			<code>547</code>
+			<se>false</se>
 			<Str sr="arg0" ve="3">%hbc_auth_header</Str>
 			<Str sr="arg1" ve="3">%http_auth_headers</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
 		</Action>
-		<Action sr="act9" ve="7">
+		<Action sr="act350" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act351" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">Variable Set</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act352" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">25</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act353" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map25</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act354" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act355" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act356" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act357" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act358" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act359" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act360" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act361" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act362" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act363" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act364" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act365" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act366" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act367" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act368" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act369" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act370" ve="7">
 			<code>339</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -325,18 +3135,180 @@ Daten, die der Server von der HTTP-Anfrage zurückgegeben hat.&lt;/_array_net.di
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
 				</Vals>
 			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg10" val="0" />
+			<Int sr="arg11" val="0" />
+			<Int sr="arg12" val="1" />
 			<Str sr="arg2" ve="3">https://api.extrahelden.de/player</Str>
 			<Str sr="arg3" ve="3">%hbc_auth_header</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="30"/>
-			<Int sr="arg9" val="0"/>
+			<Str sr="arg4" ve="3" />
+			<Str sr="arg5" ve="3" />
+			<Str sr="arg6" ve="3" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="30" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act371" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs />
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act372" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_name</Str>
+			<Str sr="arg1" ve="3">HTTP Request</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act373" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_action_num</Str>
+			<Str sr="arg1" ve="3">26</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act374" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%hbc_err_severity</Str>
+			<Str sr="arg1" ve="3">%hbc_err_severity_map26</Str>
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+			<Int sr="arg4" val="0" />
+			<Int sr="arg5" val="3" />
+			<Int sr="arg6" val="1" />
+		</Action>
+		<Action sr="act375" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>s</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act376" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act377" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act378" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Soft_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act379" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">soft</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act380" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act381" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%hbc_err_severity</lhs>
+					<op>0</op>
+					<rhs>c</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act382" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%errmsg</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act383" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Err_Task</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_task_name</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act384" ve="7">
+			<code>355</code>
+			<Str sr="arg0" ve="3">%HBC_Critical_Action</Str>
+			<Int sr="arg1" val="999999" />
+			<Str sr="arg2" ve="3">%hbc_err_action_name|%hbc_err_action_num</Str>
+			<Int sr="arg3" val="1" />
+		</Action>
+		<Action sr="act385" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">HBC Error-Handling</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1" />
+			<Str sr="arg2" ve="3">critical</Str>
+			<Str sr="arg3" ve="3" />
+			<Str sr="arg4" ve="3" />
+			<Int sr="arg5" val="0" />
+			<Int sr="arg6" val="0" />
+			<Str sr="arg7" ve="3" />
+			<Int sr="arg8" val="0" />
+			<Int sr="arg9" val="0" />
+		</Action>
+		<Action sr="act386" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0" />
+			<Str sr="arg1" ve="3">HBC Duration</Str>
+		</Action>
+		<Action sr="act387" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act388" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%err</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act389" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%errmsg</Str>
+			<Int sr="arg1" val="0" />
+			<Int sr="arg2" val="0" />
+			<Int sr="arg3" val="0" />
+		</Action>
+		<Action sr="act390" ve="7">
+			<code>38</code>
 		</Action>
 	</Task>
 </TaskerData>
